@@ -17,3 +17,19 @@ int Multiplies(list<int> numbers){
     }
     return mult;
 }
+
+int main(){
+    list<int> numbers;
+    int num;
+    cout << "Enter numbers: ";
+    while(cin >> num){
+        numbers.push_back(num);
+        cout << "Enter numbers: ";
+    }
+    cout << endl;
+    cout <<"Sum: " << Sum(numbers) << endl;
+    cout <<"Mult: " << Multiplies(numbers) << endl;
+    return 0;
+
+}
+
