@@ -18,6 +18,11 @@ int Multiplies(list<int> numbers){
     return mult;
 }
 
+list<int> Reverse(list<int> numbers) {
+    numbers.reverse();
+    return numbers;
+}
+
 int main(){
     list<int> numbers;
     int num;
@@ -29,7 +34,13 @@ int main(){
     cout << endl;
     cout <<"Sum: " << Sum(numbers) << endl;
     cout <<"Mult: " << Multiplies(numbers) << endl;
+    
+    list<int> reversedNumbers = Reverse(numbers);
+    cout << "Reversed: ";
+    for (int i : reversedNumbers) {
+        cout << i << " ";
+    }
+    cout << endl;
     return 0;
 
 }
-
