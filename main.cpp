@@ -2,20 +2,9 @@
 #include <list>
 using namespace std;
 
-int Sum(list<int> numbers){
-    int sum = 0;
-    for(int i: numbers){
-        sum = sum + i;
-    }
-    return sum;
-}
-
-int Multiplies(list<int> numbers){
-    int mult = 1;
-    for(int i : numbers){
-        mult = mult * i;
-    }
-    return mult;
+list<int> Reverse(list<int> numbers) {
+    numbers.reverse();
+    return numbers;
 }
 
 int main(){
@@ -23,13 +12,14 @@ int main(){
     int num;
     cout << "Enter numbers: ";
     while(cin >> num){
-        numbers.push_back(num);
+        numbers.push_back(num);// to add a new number to the end of list
         cout << "Enter numbers: ";
     }
+    list<int> reversedNumbers = Reverse(numbers);
+    cout << "Reversed: ";
+    for (int i : reversedNumbers) {
+        cout << i << " ";
+    }
     cout << endl;
-    cout <<"Sum: " << Sum(numbers) << endl;
-    cout <<"Mult: " << Multiplies(numbers) << endl;
     return 0;
-
 }
-
